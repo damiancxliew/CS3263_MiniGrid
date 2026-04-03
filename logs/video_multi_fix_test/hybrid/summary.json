@@ -1,0 +1,14 @@
+{
+  "episodes": 3,
+  "agent_name": "hybrid_astar",
+  "env_name": "MiniGrid-DoorKey-5x5-v0",
+  "success_rate": 1.0,
+  "average_reward": 0.9628,
+  "average_episode_length": 10.333333333333334,
+  "average_planner_expansions": 185.33333333333334,
+  "average_replans": 10.333333333333334,
+  "average_elapsed_sec": 0.16808377733347393,
+  "average_shaped_reward": 0.0,
+  "video_folder": "/Users/damianliew/Desktop/Projects/CS3263_MiniGrid/logs/video_multi_fix_test/hybrid/videos",
+  "recorded_episodes": 3
+}

@@ -1,0 +1,11 @@
+{
+  "episodes": 2,
+  "agent_name": "hybrid_astar",
+  "env_name": "MiniGrid-DoorKey-5x5-v0",
+  "success_rate": 1.0,
+  "average_reward": 0.9621999999999999,
+  "average_episode_length": 10.5,
+  "average_planner_expansions": 185.5,
+  "average_replans": 10.5,
+  "average_elapsed_sec": 0.005869624500519421
+}

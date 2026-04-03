@@ -1,0 +1,9411 @@
+{
+  "agent_name": "hybrid_astar",
+  "env_name": "MiniGrid-DoorKey-5x5-v0",
+  "seed": 10043,
+  "solved": true,
+  "reward": 0.964,
+  "steps": 10,
+  "elapsed_sec": 0.005184000001463573,
+  "planner_expansions": 167,
+  "planner_generated": 395,
+  "replan_count": 10,
+  "summary_reasoning": [
+    "Re-plan 1: sub-goal 'reach key at (1, 1)', A* found a plan of length 10 after 37 expansions.",
+    "Re-plan 2: sub-goal 'reach key at (1, 1)', A* found a plan of length 9 after 37 expansions.",
+    "Re-plan 3: sub-goal 'unlock door at (2, 1)', A* found a plan of length 8 after 25 expansions.",
+    "Re-plan 4: sub-goal 'unlock door at (2, 1)', A* found a plan of length 7 after 19 expansions.",
+    "Re-plan 5: sub-goal 'unlock door at (2, 1)', A* found a plan of length 6 after 18 expansions.",
+    "Re-plan 6: sub-goal 'reach goal at (3, 3)', A* found a plan of length 5 after 13 expansions.",
+    "Re-plan 7: sub-goal 'reach goal at (3, 3)', A* found a plan of length 4 after 8 expansions.",
+    "Re-plan 8: sub-goal 'reach goal at (3, 3)', A* found a plan of length 3 after 5 expansions.",
+    "Re-plan 9: sub-goal 'reach goal at (3, 3)', A* found a plan of length 2 after 3 expansions.",
+    "Re-plan 10: sub-goal 'reach goal at (3, 3)', A* found a plan of length 1 after 2 expansions."
+  ],
+  "initial_abstract_state": {
+    "width": 5,
+    "height": 5,
+    "walls": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "goal_pos": [
+      3,
+      3
+    ],
+    "agent_pos": [
+      1,
+      2
+    ],
+    "agent_dir": 0,
+    "agent_dir_name": "right",
+    "carrying_key": null,
+    "doors": [
+      {
+        "pos": [
+          2,
+          1
+        ],
+        "color": "yellow",
+        "is_open": false,
+        "is_locked": true
+      }
+    ],
+    "keys": [
+      {
+        "pos": [
+          1,
+          1
+        ],
+        "color": "yellow"
+      }
+    ]
+  },
+  "final_abstract_state": {
+    "width": 5,
+    "height": 5,
+    "walls": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "goal_pos": [
+      3,
+      3
+    ],
+    "agent_pos": [
+      3,
+      3
+    ],
+    "agent_dir": 1,
+    "agent_dir_name": "down",
+    "carrying_key": "yellow",
+    "doors": [
+      {
+        "pos": [
+          2,
+          1
+        ],
+        "color": "yellow",
+        "is_open": true,
+        "is_locked": false
+      }
+    ],
+    "keys": []
+  },
+  "plan_history": [
+    {
+      "replan_index": 1,
+      "symbolic_subgoal": "reach key at (1, 1)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": null,
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": [
+          {
+            "pos": [
+              1,
+              1
+            ],
+            "color": "yellow"
+          }
+        ]
+      },
+      "search_trace": {
+        "expanded_nodes": 37,
+        "generated_nodes": 89,
+        "plan_cost": 10,
+        "heuristic_at_start": 4,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: reach key at (1, 1)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "LEFT",
+          "rationale": "Rotate left to align the agent with the current symbolic sub-goal: reach key at (1, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              2
+            ],
+            "agent_dir": 3,
+            "agent_dir_name": "up",
+            "carrying_key": null,
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": [
+              {
+                "pos": [
+                  1,
+                  1
+                ],
+                "color": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "action": "PICKUP",
+          "rationale": "Pick up the yellow key because the current sub-goal is to enable door unlocking.",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              2
+            ],
+            "agent_dir": 3,
+            "agent_dir_name": "up",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(1), np.int64(1)) to make progress toward the current symbolic sub-goal: unlock door at (2, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 3,
+            "agent_dir_name": "up",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: unlock door at (2, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "TOGGLE",
+          "rationale": "Use the carried yellow key to unlock and open the door as the current sub-goal.",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              2,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 2,
+      "symbolic_subgoal": "reach key at (1, 1)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": null,
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": [
+          {
+            "pos": [
+              1,
+              1
+            ],
+            "color": "yellow"
+          }
+        ]
+      },
+      "search_trace": {
+        "expanded_nodes": 37,
+        "generated_nodes": 89,
+        "plan_cost": 9,
+        "heuristic_at_start": 4,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: reach key at (1, 1)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "PICKUP",
+          "rationale": "Pick up the yellow key because the current sub-goal is to enable door unlocking.",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              2
+            ],
+            "agent_dir": 3,
+            "agent_dir_name": "up",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(1), np.int64(1)) to make progress toward the current symbolic sub-goal: unlock door at (2, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 3,
+            "agent_dir_name": "up",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: unlock door at (2, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "TOGGLE",
+          "rationale": "Use the carried yellow key to unlock and open the door as the current sub-goal.",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              2,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 3,
+      "symbolic_subgoal": "unlock door at (2, 1)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 25,
+        "generated_nodes": 60,
+        "plan_cost": 8,
+        "heuristic_at_start": 4,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: unlock door at (2, 1)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(1), np.int64(1)) to make progress toward the current symbolic sub-goal: unlock door at (2, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 3,
+            "agent_dir_name": "up",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: unlock door at (2, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "TOGGLE",
+          "rationale": "Use the carried yellow key to unlock and open the door as the current sub-goal.",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              2,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 4,
+      "symbolic_subgoal": "unlock door at (2, 1)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 19,
+        "generated_nodes": 46,
+        "plan_cost": 7,
+        "heuristic_at_start": 5,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: unlock door at (2, 1)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: unlock door at (2, 1).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": false,
+                "is_locked": true
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "TOGGLE",
+          "rationale": "Use the carried yellow key to unlock and open the door as the current sub-goal.",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              2,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 5,
+      "symbolic_subgoal": "unlock door at (2, 1)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 18,
+        "generated_nodes": 44,
+        "plan_cost": 6,
+        "heuristic_at_start": 5,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: unlock door at (2, 1)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "TOGGLE",
+          "rationale": "Use the carried yellow key to unlock and open the door as the current sub-goal.",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              1,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              2,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 6,
+      "symbolic_subgoal": "reach goal at (3, 3)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 13,
+        "generated_nodes": 31,
+        "plan_cost": 5,
+        "heuristic_at_start": 4,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: reach goal at (3, 3)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              2,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 7,
+      "symbolic_subgoal": "reach goal at (3, 3)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          2,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 8,
+        "generated_nodes": 17,
+        "plan_cost": 4,
+        "heuristic_at_start": 3,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: reach goal at (3, 3)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 0,
+            "agent_dir_name": "right",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 8,
+      "symbolic_subgoal": "reach goal at (3, 3)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 5,
+        "generated_nodes": 10,
+        "plan_cost": 3,
+        "heuristic_at_start": 2,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: reach goal at (3, 3)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "RIGHT",
+          "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              1
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 9,
+      "symbolic_subgoal": "reach goal at (3, 3)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 3,
+        "generated_nodes": 6,
+        "plan_cost": 2,
+        "heuristic_at_start": 2,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: reach goal at (3, 3)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              2
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        },
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    },
+    {
+      "replan_index": 10,
+      "symbolic_subgoal": "reach goal at (3, 3)",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          2
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "search_trace": {
+        "expanded_nodes": 2,
+        "generated_nodes": 3,
+        "plan_cost": 1,
+        "heuristic_at_start": 1,
+        "chosen_strategy": "A*",
+        "notes": [
+          "Planning with A* over a factored state representation.",
+          "The planner uses explicit preconditions/effects, similar to STRIPS operators from class.",
+          "Initial symbolic sub-goal: reach goal at (3, 3)."
+        ]
+      },
+      "plan": [
+        {
+          "action": "FORWARD",
+          "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+          "predicted_state": {
+            "width": 5,
+            "height": 5,
+            "walls": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "goal_pos": [
+              3,
+              3
+            ],
+            "agent_pos": [
+              3,
+              3
+            ],
+            "agent_dir": 1,
+            "agent_dir_name": "down",
+            "carrying_key": "yellow",
+            "doors": [
+              {
+                "pos": [
+                  2,
+                  1
+                ],
+                "color": "yellow",
+                "is_open": true,
+                "is_locked": false
+              }
+            ],
+            "keys": []
+          }
+        }
+      ]
+    }
+  ],
+  "step_traces": [
+    {
+      "t": 0,
+      "action": "LEFT",
+      "rationale": "Rotate left to align the agent with the current symbolic sub-goal: reach key at (1, 1).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": null,
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": [
+          {
+            "pos": [
+              1,
+              1
+            ],
+            "color": "yellow"
+          }
+        ]
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "LEFT",
+        "rationale": "Rotate left to align the agent with the current symbolic sub-goal: reach key at (1, 1).",
+        "symbolic_subgoal": "reach key at (1, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                1
+              ],
+              "color": "yellow"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "t": 1,
+      "action": "PICKUP",
+      "rationale": "Pick up the yellow key because the current sub-goal is to enable door unlocking.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "PICKUP",
+        "rationale": "Pick up the yellow key because the current sub-goal is to enable door unlocking.",
+        "symbolic_subgoal": "reach key at (1, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                1
+              ],
+              "color": "yellow"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "t": 2,
+      "action": "FORWARD",
+      "rationale": "Move forward into (np.int64(1), np.int64(1)) to make progress toward the current symbolic sub-goal: unlock door at (2, 1).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "FORWARD",
+        "rationale": "Move forward into (np.int64(1), np.int64(1)) to make progress toward the current symbolic sub-goal: unlock door at (2, 1).",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        }
+      }
+    },
+    {
+      "t": 3,
+      "action": "RIGHT",
+      "rationale": "Rotate right to align the agent with the current symbolic sub-goal: unlock door at (2, 1).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "RIGHT",
+        "rationale": "Rotate right to align the agent with the current symbolic sub-goal: unlock door at (2, 1).",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        }
+      }
+    },
+    {
+      "t": 4,
+      "action": "TOGGLE",
+      "rationale": "Use the carried yellow key to unlock and open the door as the current sub-goal.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "TOGGLE",
+        "rationale": "Use the carried yellow key to unlock and open the door as the current sub-goal.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        }
+      }
+    },
+    {
+      "t": 5,
+      "action": "FORWARD",
+      "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          2,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "FORWARD",
+        "rationale": "Move forward into (np.int64(2), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        }
+      }
+    },
+    {
+      "t": 6,
+      "action": "FORWARD",
+      "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "FORWARD",
+        "rationale": "Move forward into (np.int64(3), np.int64(1)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            2,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        }
+      }
+    },
+    {
+      "t": 7,
+      "action": "RIGHT",
+      "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "RIGHT",
+        "rationale": "Rotate right to align the agent with the current symbolic sub-goal: reach goal at (3, 3).",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        }
+      }
+    },
+    {
+      "t": 8,
+      "action": "FORWARD",
+      "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          2
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "FORWARD",
+        "rationale": "Move forward into (np.int64(3), np.int64(2)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            1
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        }
+      }
+    },
+    {
+      "t": 9,
+      "action": "FORWARD",
+      "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          3
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0.964,
+      "terminated": true,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "symbolic_plan",
+        "action_name": "FORWARD",
+        "rationale": "Move forward into (np.int64(3), np.int64(3)) to make progress toward the current symbolic sub-goal: reach goal at (3, 3).",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            2
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        }
+      }
+    }
+  ]
+}

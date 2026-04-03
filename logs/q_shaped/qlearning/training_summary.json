@@ -1,0 +1,12 @@
+{
+  "episodes": 200,
+  "agent_name": "tabular_q_learning",
+  "env_name": "MiniGrid-DoorKey-5x5-v0",
+  "success_rate": 0.995,
+  "average_reward": 0.939974,
+  "average_episode_length": 16.285,
+  "average_planner_expansions": 0.0,
+  "average_replans": 0.0,
+  "average_elapsed_sec": 0.003117255209472205,
+  "average_shaped_reward": 2.876374
+}

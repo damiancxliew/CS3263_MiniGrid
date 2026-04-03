@@ -1,0 +1,15 @@
+{
+  "episodes": 5,
+  "agent_name": "tabular_q_learning",
+  "env_name": "MiniGrid-DoorKey-16x16-v0",
+  "success_rate": 0.6,
+  "average_reward": 0.5876953125,
+  "average_episode_length": 195.0,
+  "average_planner_expansions": 0.0,
+  "average_replans": 0.0,
+  "average_elapsed_sec": 0.9147482249973109,
+  "average_shaped_reward": 0.0,
+  "training_episodes": 1000,
+  "video_folder": "/Users/damianliew/Desktop/Projects/CS3263_MiniGrid/logs/hard_q_video_multi/qlearning/videos",
+  "recorded_episodes": 5
+}

@@ -1,0 +1,3629 @@
+{
+  "agent_name": "tabular_q_learning",
+  "env_name": "MiniGrid-DoorKey-5x5-v0",
+  "seed": 10045,
+  "solved": true,
+  "reward": 0.9496,
+  "steps": 14,
+  "elapsed_sec": 0.002257208005175926,
+  "planner_expansions": 0,
+  "planner_generated": 0,
+  "replan_count": 0,
+  "summary_reasoning": [],
+  "initial_abstract_state": {
+    "width": 5,
+    "height": 5,
+    "walls": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "goal_pos": [
+      3,
+      3
+    ],
+    "agent_pos": [
+      1,
+      1
+    ],
+    "agent_dir": 1,
+    "agent_dir_name": "down",
+    "carrying_key": null,
+    "doors": [
+      {
+        "pos": [
+          2,
+          1
+        ],
+        "color": "yellow",
+        "is_open": false,
+        "is_locked": true
+      }
+    ],
+    "keys": [
+      {
+        "pos": [
+          1,
+          3
+        ],
+        "color": "yellow"
+      }
+    ]
+  },
+  "final_abstract_state": {
+    "width": 5,
+    "height": 5,
+    "walls": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "goal_pos": [
+      3,
+      3
+    ],
+    "agent_pos": [
+      3,
+      3
+    ],
+    "agent_dir": 1,
+    "agent_dir_name": "down",
+    "carrying_key": "yellow",
+    "doors": [
+      {
+        "pos": [
+          2,
+          1
+        ],
+        "color": "yellow",
+        "is_open": true,
+        "is_locked": false
+      }
+    ],
+    "keys": []
+  },
+  "plan_history": [],
+  "step_traces": [
+    {
+      "t": 0,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": null,
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": [
+          {
+            "pos": [
+              1,
+              3
+            ],
+            "color": "yellow"
+          }
+        ]
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "reach key at (1, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                3
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        "q_values": {
+          "LEFT": 0.08348046243190765,
+          "RIGHT": -0.00800000037997961,
+          "FORWARD": 0.5489471554756165,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 1,
+      "action": "PICKUP",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "PICKUP",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "reach key at (1, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                3
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        "q_values": {
+          "LEFT": -0.004000000189989805,
+          "RIGHT": -0.008528000675141811,
+          "FORWARD": -0.01600000075995922,
+          "PICKUP": 0.7517573833465576,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD",
+          "PICKUP"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.3,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.3,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 2,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          3
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.06359396129846573,
+          "RIGHT": -0.00800000037997961,
+          "FORWARD": 0.8275047540664673,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 3,
+      "action": "LEFT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          3
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "LEFT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            3
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 1.206908106803894,
+          "RIGHT": 0.17237648367881775,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 4,
+      "action": "LEFT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          3
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "LEFT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            3
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 1.5883337259292603,
+          "RIGHT": 0.20275063812732697,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 5,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            3
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.01357578206807375,
+          "RIGHT": 0.0,
+          "FORWARD": 1.9136427640914917,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 6,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.0042741731740534306,
+          "RIGHT": 0.1280112862586975,
+          "FORWARD": 2.00752592086792,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 7,
+      "action": "RIGHT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "RIGHT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.14635826647281647,
+          "RIGHT": 2.0657503604888916,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 8,
+      "action": "TOGGLE",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "TOGGLE",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.8550103306770325,
+          "RIGHT": 0.5747330188751221,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 2.176043748855591,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "TOGGLE"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.5,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.5,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 9,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          2,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.14984717965126038,
+          "RIGHT": 0.0017862841486930847,
+          "FORWARD": 1.7647985219955444,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.1174350157380104,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD",
+          "TOGGLE"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 10,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            2,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.6334184408187866,
+          "RIGHT": 0.2749715745449066,
+          "FORWARD": 1.8058899641036987,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 11,
+      "action": "RIGHT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "RIGHT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.17323991656303406,
+          "RIGHT": 1.8493573665618896,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 12,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          2
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            1
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.682030975818634,
+          "RIGHT": 0.3463347256183624,
+          "FORWARD": 1.9476449489593506,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 13,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          3
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0.9496,
+      "terminated": true,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, treating control as an MDP policy improvement step.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            2
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.09365905821323395,
+          "RIGHT": -0.0079084113240242,
+          "FORWARD": 2.0003111362457275,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 1.9996,
+        "reward_terms": {
+          "env_reward": 0.9496,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 1.0
+        }
+      }
+    }
+  ],
+  "extra_metrics": {
+    "training": false,
+    "max_steps": 200,
+    "epsilon": 0.07339156434523345,
+    "q_table_size": 151,
+    "shaped_reward_total": 0.0
+  }
+}

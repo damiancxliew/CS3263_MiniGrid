@@ -1,0 +1,242 @@
+[
+  {
+    "episode_index": 1,
+    "reward": 0.514,
+    "shaped_reward": -2.2360000000000033,
+    "solved": true,
+    "steps": 135,
+    "epsilon": 0.199
+  },
+  {
+    "episode_index": 2,
+    "reward": 0.0,
+    "shaped_reward": -11.989999999999993,
+    "solved": false,
+    "steps": 200,
+    "epsilon": 0.19800500000000001
+  },
+  {
+    "episode_index": 3,
+    "reward": 0.7552,
+    "shaped_reward": 1.7652,
+    "solved": true,
+    "steps": 68,
+    "epsilon": 0.197014975
+  },
+  {
+    "episode_index": 4,
+    "reward": 0.9352,
+    "shaped_reward": 2.7752,
+    "solved": true,
+    "steps": 18,
+    "epsilon": 0.19602990012500002
+  },
+  {
+    "episode_index": 5,
+    "reward": 0.8668,
+    "shaped_reward": 2.2168,
+    "solved": true,
+    "steps": 37,
+    "epsilon": 0.19504975062437502
+  },
+  {
+    "episode_index": 6,
+    "reward": 0.9208000000000001,
+    "shaped_reward": 2.8208,
+    "solved": true,
+    "steps": 22,
+    "epsilon": 0.19407450187125314
+  },
+  {
+    "episode_index": 7,
+    "reward": 0.9496,
+    "shaped_reward": 2.9096,
+    "solved": true,
+    "steps": 14,
+    "epsilon": 0.19310412936189686
+  },
+  {
+    "episode_index": 8,
+    "reward": 0.9352,
+    "shaped_reward": 2.9952,
+    "solved": true,
+    "steps": 18,
+    "epsilon": 0.19213860871508737
+  },
+  {
+    "episode_index": 9,
+    "reward": 0.8056,
+    "shaped_reward": 1.3956,
+    "solved": true,
+    "steps": 54,
+    "epsilon": 0.19117791567151193
+  },
+  {
+    "episode_index": 10,
+    "reward": 0.9279999999999999,
+    "shaped_reward": 2.998,
+    "solved": true,
+    "steps": 20,
+    "epsilon": 0.19022202609315436
+  },
+  {
+    "episode_index": 11,
+    "reward": 0.8236,
+    "shaped_reward": 1.5035999999999996,
+    "solved": true,
+    "steps": 49,
+    "epsilon": 0.18927091596268858
+  },
+  {
+    "episode_index": 12,
+    "reward": 0.9568,
+    "shaped_reward": 3.0168,
+    "solved": true,
+    "steps": 12,
+    "epsilon": 0.18832456138287512
+  },
+  {
+    "episode_index": 13,
+    "reward": 0.9388,
+    "shaped_reward": 2.9388,
+    "solved": true,
+    "steps": 17,
+    "epsilon": 0.18738293857596075
+  },
+  {
+    "episode_index": 14,
+    "reward": 0.874,
+    "shaped_reward": 2.9539999999999997,
+    "solved": true,
+    "steps": 35,
+    "epsilon": 0.18644602388308096
+  },
+  {
+    "episode_index": 15,
+    "reward": 0.73,
+    "shaped_reward": 0.6699999999999997,
+    "solved": true,
+    "steps": 75,
+    "epsilon": 0.18551379376366556
+  },
+  {
+    "episode_index": 16,
+    "reward": 0.9676,
+    "shaped_reward": 2.9176,
+    "solved": true,
+    "steps": 9,
+    "epsilon": 0.18458622479484724
+  },
+  {
+    "episode_index": 17,
+    "reward": 0.9064,
+    "shaped_reward": 2.3264,
+    "solved": true,
+    "steps": 26,
+    "epsilon": 0.183663293670873
+  },
+  {
+    "episode_index": 18,
+    "reward": 0.964,
+    "shaped_reward": 2.9139999999999997,
+    "solved": true,
+    "steps": 10,
+    "epsilon": 0.18274497720251864
+  },
+  {
+    "episode_index": 19,
+    "reward": 0.8992,
+    "shaped_reward": 2.6292,
+    "solved": true,
+    "steps": 28,
+    "epsilon": 0.18183125231650604
+  },
+  {
+    "episode_index": 20,
+    "reward": 0.9568,
+    "shaped_reward": 2.9568000000000003,
+    "solved": true,
+    "steps": 12,
+    "epsilon": 0.18092209605492351
+  },
+  {
+    "episode_index": 21,
+    "reward": 0.964,
+    "shaped_reward": 2.964,
+    "solved": true,
+    "steps": 10,
+    "epsilon": 0.1800174855746489
+  },
+  {
+    "episode_index": 22,
+    "reward": 0.964,
+    "shaped_reward": 3.014,
+    "solved": true,
+    "steps": 10,
+    "epsilon": 0.17911739814677563
+  },
+  {
+    "episode_index": 23,
+    "reward": 0.9316,
+    "shaped_reward": 2.9916,
+    "solved": true,
+    "steps": 19,
+    "epsilon": 0.17822181115604174
+  },
+  {
+    "episode_index": 24,
+    "reward": 0.9172,
+    "shaped_reward": 2.8372,
+    "solved": true,
+    "steps": 23,
+    "epsilon": 0.17733070210026153
+  },
+  {
+    "episode_index": 25,
+    "reward": 0.9172,
+    "shaped_reward": 2.6372,
+    "solved": true,
+    "steps": 23,
+    "epsilon": 0.17644404858976023
+  },
+  {
+    "episode_index": 26,
+    "reward": 0.964,
+    "shaped_reward": 3.014,
+    "solved": true,
+    "steps": 10,
+    "epsilon": 0.17556182834681144
+  },
+  {
+    "episode_index": 27,
+    "reward": 0.9568,
+    "shaped_reward": 2.9168000000000003,
+    "solved": true,
+    "steps": 12,
+    "epsilon": 0.1746840192050774
+  },
+  {
+    "episode_index": 28,
+    "reward": 0.946,
+    "shaped_reward": 2.996,
+    "solved": true,
+    "steps": 15,
+    "epsilon": 0.173810599109052
+  },
+  {
+    "episode_index": 29,
+    "reward": 0.9424,
+    "shaped_reward": 2.9124,
+    "solved": true,
+    "steps": 16,
+    "epsilon": 0.17294154611350673
+  },
+  {
+    "episode_index": 30,
+    "reward": 0.9496,
+    "shaped_reward": 2.9596,
+    "solved": true,
+    "steps": 14,
+    "epsilon": 0.1720768383829392
+  }
+]
