@@ -1,10 +1,19 @@
 from __future__ import annotations
 
 import heapq
+from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 
 from minigrid_solver.domain import AbstractState, PlanStep, SearchTrace
 from minigrid_solver.planning.symbolic_model import PlannerModel
+
+
+@dataclass(order=True)
+class SearchNode:
+    priority: float
+    path_cost: float
+    tie_breaker: int
+    state: AbstractState = field(compare=False)
 
 
 class AStarPlanner:
@@ -32,6 +41,11 @@ class AStarPlanner:
     def is_goal(state: AbstractState) -> bool:
         return state.agent_pos == state.goal_pos
 
+    def action_cost(self, current: AbstractState, next_state: AbstractState) -> float:
+        signature = PlannerModel.state_signature(next_state)
+        revisit_penalty = 0.05 * self.revisit_counts.get(signature, 0)
+        return 1.0 + revisit_penalty
+
     def plan(self, initial_state: AbstractState) -> Tuple[List[PlanStep], SearchTrace]:
         self.trace = SearchTrace()
         self.trace.heuristic_at_start = self.heuristic(initial_state)
@@ -41,17 +55,32 @@ class AStarPlanner:
         )
         self.trace.notes.append(f"Initial symbolic sub-goal: {PlannerModel.subgoal_description(initial_state)}.")
 
-        frontier: List[Tuple[float, float, int, AbstractState]] = []
-        heapq.heappush(frontier, (self.trace.heuristic_at_start, 0, 0, initial_state))
+        self.revisit_counts: Dict[Tuple[object, ...], int] = {PlannerModel.state_signature(initial_state): 1}
+        frontier: List[SearchNode] = []
+        counter = 0
+        heapq.heappush(
+            frontier,
+            SearchNode(
+                priority=float(self.trace.heuristic_at_start or 0),
+                path_cost=0.0,
+                tie_breaker=counter,
+                state=initial_state,
+            ),
+        )
 
         came_from: Dict[AbstractState, Optional[AbstractState]] = {initial_state: None}
         action_from: Dict[AbstractState, Optional[PlanStep]] = {initial_state: None}
-        g_cost: Dict[AbstractState, float] = {initial_state: 0.0}
-        revisit_counts: Dict[Tuple[object, ...], int] = {PlannerModel.state_signature(initial_state): 1}
-        counter = 0
+        best_cost_by_signature: Dict[Tuple[object, ...], float] = {PlannerModel.state_signature(initial_state): 0.0}
 
         while frontier:
-            _, cost_so_far, _, current = heapq.heappop(frontier)
+            node = heapq.heappop(frontier)
+            current = node.state
+            cost_so_far = node.path_cost
+            signature = PlannerModel.state_signature(current)
+
+            if cost_so_far > best_cost_by_signature.get(signature, float("inf")):
+                continue
+
             self.trace.expanded_nodes += 1
 
             if self.is_goal(current):
@@ -61,15 +90,22 @@ class AStarPlanner:
 
             for action, next_state, rationale in PlannerModel.successors(current):
                 self.trace.generated_nodes += 1
-                signature = PlannerModel.state_signature(next_state)
-                revisit_penalty = 0.05 * revisit_counts.get(signature, 0)
-                new_cost = cost_so_far + 1.0 + revisit_penalty
-                if next_state not in g_cost or new_cost < g_cost[next_state]:
-                    g_cost[next_state] = new_cost
-                    revisit_counts[signature] = revisit_counts.get(signature, 0) + 1
+                next_signature = PlannerModel.state_signature(next_state)
+                new_cost = cost_so_far + self.action_cost(current, next_state)
+                if new_cost < best_cost_by_signature.get(next_signature, float("inf")):
+                    best_cost_by_signature[next_signature] = new_cost
+                    self.revisit_counts[next_signature] = self.revisit_counts.get(next_signature, 0) + 1
                     counter += 1
                     priority = new_cost + self.heuristic(next_state)
-                    heapq.heappush(frontier, (priority, new_cost, counter, next_state))
+                    heapq.heappush(
+                        frontier,
+                        SearchNode(
+                            priority=priority,
+                            path_cost=new_cost,
+                            tie_breaker=counter,
+                            state=next_state,
+                        ),
+                    )
                     came_from[next_state] = current
                     action_from[next_state] = PlanStep(
                         action=action,

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import List, Optional, Tuple
 
 from minigrid_solver.domain import (
@@ -93,82 +94,85 @@ class PlannerModel:
         return valid
 
     @staticmethod
-    def successors(state: AbstractState) -> List[Tuple[PrimitiveAction, AbstractState, str]]:
-        successors: List[Tuple[PrimitiveAction, AbstractState, str]] = []
+    def transition(
+        state: AbstractState,
+        action: PrimitiveAction,
+    ) -> Optional[Tuple[AbstractState, str]]:
+        """Apply one symbolic operator, mirroring the GridUniverse search style."""
+
         subgoal = PlannerModel.subgoal_description(state)
-
-        if PrimitiveAction.LEFT in PlannerModel.valid_actions(state):
-            successors.append(
-                (
-                    PrimitiveAction.LEFT,
-                    AbstractState(**{**state.__dict__, "agent_dir": (state.agent_dir - 1) % 4}),
-                    f"Rotate left to align the agent with the current symbolic sub-goal: {subgoal}.",
-                )
-            )
-        if PrimitiveAction.RIGHT in PlannerModel.valid_actions(state):
-            successors.append(
-                (
-                    PrimitiveAction.RIGHT,
-                    AbstractState(**{**state.__dict__, "agent_dir": (state.agent_dir + 1) % 4}),
-                    f"Rotate right to align the agent with the current symbolic sub-goal: {subgoal}.",
-                )
-            )
-
         front = PlannerModel.cell_in_front(state)
         door_ahead = PlannerModel.door_at(state, front)
         key_ahead = PlannerModel.key_at(state, front)
 
-        if PrimitiveAction.FORWARD in PlannerModel.valid_actions(state):
-            successors.append(
-                (
-                    PrimitiveAction.FORWARD,
-                    AbstractState(**{**state.__dict__, "agent_pos": front}),
-                    f"Move forward into {front} to make progress toward the current symbolic sub-goal: {subgoal}.",
-                )
+        if action == PrimitiveAction.LEFT:
+            return (
+                AbstractState(**{**state.__dict__, "agent_dir": (state.agent_dir - 1) % 4}),
+                f"Rotate left to align the agent with the current symbolic sub-goal: {subgoal}.",
             )
 
-        if PrimitiveAction.PICKUP in PlannerModel.valid_actions(state) and key_ahead is not None:
+        if action == PrimitiveAction.RIGHT:
+            return (
+                AbstractState(**{**state.__dict__, "agent_dir": (state.agent_dir + 1) % 4}),
+                f"Rotate right to align the agent with the current symbolic sub-goal: {subgoal}.",
+            )
+
+        if action == PrimitiveAction.FORWARD and not PlannerModel.is_blocked(state, front):
+            return (
+                AbstractState(**{**state.__dict__, "agent_pos": front}),
+                f"Move forward into {front} to make progress toward the current symbolic sub-goal: {subgoal}.",
+            )
+
+        if action == PrimitiveAction.PICKUP and key_ahead is not None and state.carrying_key is None:
             remaining_keys = tuple(key for key in state.keys if key.pos != key_ahead.pos)
-            successors.append(
-                (
-                    PrimitiveAction.PICKUP,
-                    AbstractState(
-                        **{
-                            **state.__dict__,
-                            "carrying_key": key_ahead.color,
-                            "keys": remaining_keys,
-                        }
-                    ),
-                    f"Pick up the {key_ahead.color} key because the current sub-goal is to enable door unlocking.",
-                )
+            return (
+                AbstractState(
+                    **{
+                        **state.__dict__,
+                        "carrying_key": key_ahead.color,
+                        "keys": remaining_keys,
+                    }
+                ),
+                f"Pick up the {key_ahead.color} key because the current sub-goal is to enable door unlocking.",
             )
 
-        if PrimitiveAction.TOGGLE in PlannerModel.valid_actions(state) and door_ahead is not None:
+        if action == PrimitiveAction.TOGGLE and door_ahead is not None:
             can_unlock = state.carrying_key == door_ahead.color
-            new_doors = []
-            for door in state.doors:
-                if door.pos != door_ahead.pos:
-                    new_doors.append(door)
-                else:
-                    new_doors.append(
-                        DoorFact(
-                            pos=door.pos,
-                            color=door.color,
-                            is_open=True,
-                            is_locked=False,
+            if (not door_ahead.is_locked) or can_unlock:
+                new_doors = []
+                for door in state.doors:
+                    if door.pos != door_ahead.pos:
+                        new_doors.append(door)
+                    else:
+                        new_doors.append(
+                            DoorFact(
+                                pos=door.pos,
+                                color=door.color,
+                                is_open=True,
+                                is_locked=False,
+                            )
                         )
-                    )
-            reason = (
-                f"Toggle the {door_ahead.color} door to open the path toward {state.goal_pos}."
-                if not door_ahead.is_locked
-                else f"Use the carried {door_ahead.color} key to unlock and open the door as the current sub-goal."
-            )
-            successors.append(
-                (
-                    PrimitiveAction.TOGGLE,
-                    AbstractState(**{**state.__dict__, "doors": tuple(sorted(new_doors, key=lambda d: d.pos))}),
+                reason = (
+                    f"Toggle the {door_ahead.color} door to open the path toward {state.goal_pos}."
+                    if not door_ahead.is_locked
+                    else f"Use the carried {door_ahead.color} key to unlock and open the door as the current sub-goal."
+                )
+                return (
+                    AbstractState(
+                        **{**state.__dict__, "doors": tuple(sorted(new_doors, key=lambda door: door.pos))}
+                    ),
                     reason,
                 )
-            )
 
+        return None
+
+    @staticmethod
+    def successors(state: AbstractState) -> List[Tuple[PrimitiveAction, AbstractState, str]]:
+        successors: List[Tuple[PrimitiveAction, AbstractState, str]] = []
+        for action in PlannerModel.valid_actions(state):
+            result = PlannerModel.transition(state, action)
+            if result is None:
+                continue
+            next_state, rationale = result
+            successors.append((action, next_state, rationale))
         return successors
