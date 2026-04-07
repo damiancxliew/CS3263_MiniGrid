@@ -114,7 +114,7 @@ The Grid-Universe part of the project contains:
 - handcrafted level generators in `gameplay_levels.py`
 - model export helpers and training scripts for the CNN and ciphertext decoder
 - evaluation and rendering scripts
-- notebook material and generated outputs
+- generated outputs
 
 Important files:
 
@@ -138,10 +138,6 @@ Render a Grid-Universe episode to MP4:
 ```bash
 python grid_universe_project/scripts/render_grid_universe_video.py --level build_level_required_two --fps 2
 ```
-
-Open the notebook material:
-
-- `grid_universe_project/notebooks/mini-project.ipynb`
 
 ### Grid-Universe Outputs
 
