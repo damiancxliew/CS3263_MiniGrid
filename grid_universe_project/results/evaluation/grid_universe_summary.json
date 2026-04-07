@@ -1,0 +1,302 @@
+[
+  {
+    "scope": "overall",
+    "level_name": "ALL_LEVELS",
+    "observation_type": "level",
+    "episodes": 70,
+    "success_rate": 1.0,
+    "average_reward": -34.714285714285715,
+    "average_steps": 12.571428571428571,
+    "average_elapsed_sec": 0.5872169047851847
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_basic_movement",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -9.0,
+    "average_steps": 4.0,
+    "average_elapsed_sec": 0.20425233320565894
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_capstone",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -72.0,
+    "average_steps": 25.0,
+    "average_elapsed_sec": 1.5607566334074363
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_enemy_patrol",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -27.0,
+    "average_steps": 10.0,
+    "average_elapsed_sec": 1.4764076083956752
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_hazard_detour",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -45.0,
+    "average_steps": 16.0,
+    "average_elapsed_sec": 0.6906768413959071
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_key_door",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -33.0,
+    "average_steps": 12.0,
+    "average_elapsed_sec": 0.42114395860116927
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_maze_turns",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -27.0,
+    "average_steps": 10.0,
+    "average_elapsed_sec": 0.2916173750010785
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_optional_coin",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -27.0,
+    "average_steps": 10.0,
+    "average_elapsed_sec": 0.21914480840787293
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_portal_shortcut",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -21.0,
+    "average_steps": 8.0,
+    "average_elapsed_sec": 0.1542470081942156
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_power_boots",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -27.0,
+    "average_steps": 10.0,
+    "average_elapsed_sec": 0.5715394583996385
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_power_ghost",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -48.0,
+    "average_steps": 17.0,
+    "average_elapsed_sec": 0.8153244417917449
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_power_shield",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -42.0,
+    "average_steps": 15.0,
+    "average_elapsed_sec": 0.5225895252020564
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_pushable_box",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -21.0,
+    "average_steps": 8.0,
+    "average_elapsed_sec": 0.19170389139908367
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_required_one",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -24.0,
+    "average_steps": 9.0,
+    "average_elapsed_sec": 0.26257145839044826
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_required_two",
+    "observation_type": "level",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -63.0,
+    "average_steps": 22.0,
+    "average_elapsed_sec": 0.8390613252006005
+  },
+  {
+    "scope": "overall",
+    "level_name": "ALL_LEVELS",
+    "observation_type": "image",
+    "episodes": 70,
+    "success_rate": 0.9714285714285714,
+    "average_reward": -36.042857142857144,
+    "average_steps": 13.014285714285714,
+    "average_elapsed_sec": 1.3692638719728816
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_basic_movement",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -9.0,
+    "average_steps": 4.0,
+    "average_elapsed_sec": 0.29935610000393353
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_capstone",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -96.0,
+    "average_steps": 33.0,
+    "average_elapsed_sec": 2.5855068665987346
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_enemy_patrol",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 0.8,
+    "average_reward": -23.4,
+    "average_steps": 8.8,
+    "average_elapsed_sec": 2.142188833002001
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_hazard_detour",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -45.0,
+    "average_steps": 16.0,
+    "average_elapsed_sec": 1.26220038360334
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_key_door",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -33.0,
+    "average_steps": 12.0,
+    "average_elapsed_sec": 1.6288994416070637
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_maze_turns",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -27.0,
+    "average_steps": 10.0,
+    "average_elapsed_sec": 1.3271337163983845
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_optional_coin",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -27.0,
+    "average_steps": 10.0,
+    "average_elapsed_sec": 1.104250049602706
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_portal_shortcut",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -21.0,
+    "average_steps": 8.0,
+    "average_elapsed_sec": 0.843717941606883
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_power_boots",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 0.8,
+    "average_reward": -25.2,
+    "average_steps": 9.4,
+    "average_elapsed_sec": 1.3102607250039
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_power_ghost",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -48.0,
+    "average_steps": 17.0,
+    "average_elapsed_sec": 1.771202583395643
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_power_shield",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -42.0,
+    "average_steps": 15.0,
+    "average_elapsed_sec": 1.2489161751989741
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_pushable_box",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -21.0,
+    "average_steps": 8.0,
+    "average_elapsed_sec": 0.8421320915978867
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_required_one",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -24.0,
+    "average_steps": 9.0,
+    "average_elapsed_sec": 0.7519778916030191
+  },
+  {
+    "scope": "per_level",
+    "level_name": "build_level_required_two",
+    "observation_type": "image",
+    "episodes": 5,
+    "success_rate": 1.0,
+    "average_reward": -63.0,
+    "average_steps": 22.0,
+    "average_elapsed_sec": 2.051951408397872
+  }
+]

@@ -1,9 +1,0 @@
-{
-  "env": "MiniGrid-DoorKey-5x5-v0",
-  "agent": "compare",
-  "episodes": 5,
-  "train_episodes": 200,
-  "seed": 42,
-  "max_steps": 300,
-  "output_dir": "logs/doorkey_baseline"
-}

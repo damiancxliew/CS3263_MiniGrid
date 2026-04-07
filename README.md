@@ -1,76 +1,162 @@
-# Gym-MiniGrid Solver
+# CS3263 AI Project Repository
 
-Hybrid MiniGrid solver for CS3263 Foundations of Artificial Intelligence under the theme "Agentic AI and Autonomous Decision Support".
+This repository is now organized into two self-contained project areas:
 
-This Phase 1 implementation focuses on MiniGrid DoorKey tasks in the Farama Gymnasium ecosystem. It combines:
+- `minigrid_project/` for the MiniGrid DoorKey reinforcement learning and A* planning work
+- `grid_universe_project/` for the Grid-Universe planning and CNN+A* hybrid work
 
-- symbolic planning for high-level decision making
-- a modular factored state abstraction layer
-- transparent reasoning traces saved as JSON
-- a lightweight tabular Q-learning baseline for comparison
+The goal of the reorganization is to keep code, scripts, and outputs for each environment together so the repository is easier to navigate and report on.
 
-## Project Overview
-
-MiniGrid DoorKey is a good fit for course ideas because the agent faces a long-horizon control problem: it must often collect a key before unlocking a door and only then can reach the goal. In CS3263 terms, the environment can be viewed as an MDP, but solving it well also benefits from explicit classical planning and structured knowledge representation.
-
-This repository treats the MiniGrid world as a factored symbolic state containing:
-
-- agent position and orientation
-- key possession
-- door states
-- goal position
-- wall locations
-
-The hybrid agent uses A* forward search over this symbolic state. Its action model uses STRIPS-style preconditions and effects, which makes the agent's reasoning inspectable and easy to connect to the planning lectures. Every episode also saves step-level rationales and planner traces to support responsible AI goals like transparency and trust.
-
-## Architecture
+## Repository Layout
 
 ```text
-src/
-  minigrid_solver/
-    agents/
-      hybrid.py
-      q_learning.py
-    envs/
-      factory.py
-    perception/
-      symbolic.py
-    planning/
-      astar.py
-      symbolic_model.py
-    utils/
-      evaluation.py
-      io.py
-    domain.py
-scripts/
-  run_experiment.py
-  plot_results.py
-configs/
-  doorkey_experiment.json
-logs/
-MiniGridSolve.py
+minigrid_project/
+  MiniGridSolve.py
+  configs/
+  scripts/
+    run_experiment.py
+    plot_results.py
+  src/
+    minigrid_solver/
+  results/
+    logs/
+
+grid_universe_project/
+  final.py
+  gameplay_levels.py
+  tile_cnn_loader.py
+  train_logistic_regression.py
+  train_tile_cnn.py
+  utils.py
+  scripts/
+    evaluate_grid_universe.py
+    render_grid_universe_video.py
+  data/
+    assets/
+    cipher_objective.csv
+    generated_tiles/
+  results/
+    evaluation/
+    videos/
+
+References/
 requirements.txt
 README.md
 ```
 
-## Relation To Course Concepts
+## MiniGrid Project
 
-This code is intentionally structured around the lecture materials:
+The MiniGrid part of the project contains:
 
-- MDP / policy / value / control:
-  The environment is handled through Gymnasium's state-transition interface, and the Q-learning baseline learns a policy over factored states.
-- Planning as search:
-  The hybrid agent uses forward state-space A* search to construct a plan toward the goal.
-- STRIPS / PDDL-style thinking:
-  The symbolic transition model explicitly defines preconditions and effects for turning, moving, picking up keys, and toggling doors.
-- Factored knowledge representation:
-  The abstraction layer separates agent, objects, and propositional environment facts rather than treating the state as a single opaque vector.
-- Responsible AI / transparency:
-  Each episode stores symbolic states, plan histories, and action rationales in JSON so the agent's decisions can be inspected afterward.
+- a tabular Q-learning baseline
+- an explainable A* planning agent
+- symbolic state abstraction over DoorKey environments
+- experiment logs and comparison outputs
 
-## Setup
+Important files:
+
+- `minigrid_project/src/minigrid_solver/agents/q_learning.py`
+- `minigrid_project/src/minigrid_solver/agents/hybrid.py`
+- `minigrid_project/src/minigrid_solver/planning/astar.py`
+- `minigrid_project/src/minigrid_solver/planning/symbolic_model.py`
+- `minigrid_project/results/logs/`
+
+### Run MiniGrid Experiments
+
+Run the hybrid planning baseline:
+
+```bash
+python minigrid_project/scripts/run_experiment.py --agent hybrid --env MiniGrid-DoorKey-5x5-v0 --episodes 5
+```
+
+Run the Q-learning baseline:
+
+```bash
+python minigrid_project/scripts/run_experiment.py --agent qlearning --env MiniGrid-DoorKey-5x5-v0 --train-episodes 200 --episodes 5
+```
+
+Run both for comparison:
+
+```bash
+python minigrid_project/scripts/run_experiment.py --agent compare --env MiniGrid-DoorKey-5x5-v0 --train-episodes 200 --episodes 5
+```
+
+Plot saved MiniGrid comparison results:
+
+```bash
+python minigrid_project/scripts/plot_results.py --comparison-json minigrid_project/results/logs/doorkey_baseline/comparison.json
+```
+
+Legacy entrypoint:
+
+```bash
+python minigrid_project/MiniGridSolve.py
+```
+
+### MiniGrid Outputs
+
+MiniGrid experiment outputs are stored under:
+
+- `minigrid_project/results/logs/`
+
+These include:
+
+- per-episode JSON traces
+- summary JSON files
+- optional training curves
+- optional recorded videos from Gymnasium wrappers
+
+## Grid-Universe Project
+
+The Grid-Universe part of the project contains:
+
+- the final full-state and image-observation agent in `final.py`
+- handcrafted level generators in `gameplay_levels.py`
+- model export helpers and training scripts for the CNN and ciphertext decoder
+- evaluation and rendering scripts
+- notebook material and generated outputs
+
+Important files:
+
+- `grid_universe_project/final.py`
+- `grid_universe_project/gameplay_levels.py`
+- `grid_universe_project/scripts/evaluate_grid_universe.py`
+- `grid_universe_project/scripts/render_grid_universe_video.py`
+- `grid_universe_project/results/evaluation/`
+- `grid_universe_project/results/videos/`
+
+### Run Grid-Universe Evaluation
+
+Evaluate the Grid-Universe agent across all authored levels:
+
+```bash
+python grid_universe_project/scripts/evaluate_grid_universe.py
+```
+
+Render a Grid-Universe episode to MP4:
+
+```bash
+python grid_universe_project/scripts/render_grid_universe_video.py --level build_level_required_two --fps 2
+```
+
+Open the notebook material:
+
+- `grid_universe_project/notebooks/mini-project.ipynb`
+
+### Grid-Universe Outputs
+
+Grid-Universe outputs are stored under:
+
+- `grid_universe_project/results/evaluation/`
+- `grid_universe_project/results/videos/`
+
+The evaluation folder contains structured JSON and CSV summaries. The videos folder contains rendered MP4 trajectories.
+
+## Environment Setup
 
 Use Python 3.10+.
+
+If you are using the local virtual environment:
 
 ```bash
 python -m venv .venv
@@ -78,79 +164,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-The implementation follows Farama-style APIs through `gymnasium` and `minigrid`.
+If you are using the larger conda environment, use:
 
-## How To Run
+- `requirements-conda.txt`
 
-Run the hybrid planning baseline:
+## Notes
 
-```bash
-python scripts/run_experiment.py --agent hybrid --env MiniGrid-DoorKey-5x5-v0 --episodes 5
-```
-
-Run the tabular Q-learning baseline:
-
-```bash
-python scripts/run_experiment.py --agent qlearning --env MiniGrid-DoorKey-5x5-v0 --train-episodes 200 --episodes 5
-```
-
-Run both for comparison:
-
-```bash
-python scripts/run_experiment.py --agent compare --env MiniGrid-DoorKey-5x5-v0 --train-episodes 200 --episodes 5
-```
-
-Create a comparison plot after a compare run:
-
-```bash
-python scripts/plot_results.py --comparison-json logs/doorkey_baseline/comparison.json
-```
-
-The legacy entrypoint is also preserved:
-
-```bash
-python MiniGridSolve.py --agent hybrid
-```
-
-## Outputs
-
-Each run writes to `logs/` and includes:
-
-- per-episode JSON traces
-- summary metrics
-- optional cross-method comparison JSON
-- optional PNG comparison plots
-
-Tracked metrics include:
-
-- success rate
-- average reward
-- average episode length
-- average planner expansions
-- average re-plan count
-
-## Explainability Features
-
-Every episode log includes:
-
-- the initial and final factored symbolic state
-- each high-level plan generated by A*
-- planner node expansion statistics
-- step-by-step rationales for chosen actions
-- symbolic state snapshots after every environment transition
-
-This is meant to support responsible AI reporting by making the agent's reasoning visible rather than purely latent.
-
-## Current Limitations
-
-- Phase 1 perception uses direct symbolic extraction from MiniGrid internals rather than learned perception.
-- The tabular RL baseline uses the same factored abstraction and is intended as a lightweight comparison, not a state-of-the-art learner.
-- The planner is designed around DoorKey-style tasks first; larger environments may need stronger heuristics or macro-actions.
-- The symbolic model assumes deterministic world dynamics, which is appropriate for MiniGrid DoorKey but not for more stochastic domains.
-
-## Next Steps
-
-- Replace or augment the symbolic extractor with a learned perception model.
-- Add a learned local controller or planner-repair policy for failed symbolic plans.
-- Extend the symbolic domain model to more MiniGrid tasks such as KeyCorridor or MultiRoom.
-- Add richer evaluation scripts, including ablations over abstraction quality and transparency metrics.
+- The MiniGrid and Grid-Universe codebases are intentionally separated now, but they still share the same repository for reporting and comparison.
+- Historical outputs were preserved and moved into the corresponding `results/` folder for each project.
+- Some generated or unused artifacts were removed during cleanup, including cache folders, backup scripts, and stray top-level files that were no longer referenced.
