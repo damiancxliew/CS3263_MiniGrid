@@ -7,5 +7,6 @@
   "average_episode_length": 10.6,
   "average_planner_expansions": 188.0,
   "average_replans": 10.6,
-  "average_elapsed_sec": 0.005309549999947194
+  "average_elapsed_sec": 0.005612458405084908,
+  "average_shaped_reward": 0.0
 }

@@ -5,7 +5,7 @@
   "solved": true,
   "reward": 0.9604,
   "steps": 11,
-  "elapsed_sec": 0.005779332997917663,
+  "elapsed_sec": 0.0062840000027790666,
   "planner_expansions": 204,
   "planner_generated": 484,
   "replan_count": 11,
@@ -10938,5 +10938,12 @@
         }
       }
     }
-  ]
+  ],
+  "extra_metrics": {
+    "training": false,
+    "max_steps": 300,
+    "epsilon": null,
+    "q_table_size": null,
+    "shaped_reward_total": null
+  }
 }

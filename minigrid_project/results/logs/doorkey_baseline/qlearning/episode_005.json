@@ -1,0 +1,3179 @@
+{
+  "agent_name": "tabular_q_learning",
+  "env_name": "MiniGrid-DoorKey-5x5-v0",
+  "seed": 10046,
+  "solved": true,
+  "reward": 0.9568,
+  "steps": 12,
+  "elapsed_sec": 0.0015006250177975744,
+  "planner_expansions": 0,
+  "planner_generated": 0,
+  "replan_count": 0,
+  "summary_reasoning": [],
+  "initial_abstract_state": {
+    "width": 5,
+    "height": 5,
+    "walls": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "goal_pos": [
+      3,
+      3
+    ],
+    "agent_pos": [
+      1,
+      2
+    ],
+    "agent_dir": 0,
+    "agent_dir_name": "right",
+    "carrying_key": null,
+    "doors": [
+      {
+        "pos": [
+          2,
+          1
+        ],
+        "color": "yellow",
+        "is_open": false,
+        "is_locked": true
+      }
+    ],
+    "keys": [
+      {
+        "pos": [
+          1,
+          1
+        ],
+        "color": "yellow"
+      }
+    ]
+  },
+  "final_abstract_state": {
+    "width": 5,
+    "height": 5,
+    "walls": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "goal_pos": [
+      3,
+      3
+    ],
+    "agent_pos": [
+      3,
+      3
+    ],
+    "agent_dir": 1,
+    "agent_dir_name": "down",
+    "carrying_key": "yellow",
+    "doors": [
+      {
+        "pos": [
+          2,
+          1
+        ],
+        "color": "yellow",
+        "is_open": true,
+        "is_locked": false
+      }
+    ],
+    "keys": []
+  },
+  "plan_history": [],
+  "step_traces": [
+    {
+      "t": 0,
+      "action": "RIGHT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": null,
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": [
+          {
+            "pos": [
+              1,
+              1
+            ],
+            "color": "yellow"
+          }
+        ]
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "RIGHT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach key at (1, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                1
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        "q_values": {
+          "LEFT": 0.0,
+          "RIGHT": 0.10012371838092804,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 1,
+      "action": "RIGHT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 2,
+        "agent_dir_name": "left",
+        "carrying_key": null,
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": [
+          {
+            "pos": [
+              1,
+              1
+            ],
+            "color": "yellow"
+          }
+        ]
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "RIGHT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach key at (1, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                1
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        "q_values": {
+          "LEFT": 0.0,
+          "RIGHT": 0.5358518958091736,
+          "FORWARD": -0.0007600000244565308,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 2,
+      "action": "RIGHT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": null,
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": [
+          {
+            "pos": [
+              1,
+              1
+            ],
+            "color": "yellow"
+          }
+        ]
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "RIGHT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach key at (1, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 2,
+          "agent_dir_name": "left",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                1
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        "q_values": {
+          "LEFT": 0.019736234098672867,
+          "RIGHT": 1.4205210208892822,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 3,
+      "action": "PICKUP",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          2
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "PICKUP",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach key at (1, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": null,
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": [
+            {
+              "pos": [
+                1,
+                1
+              ],
+              "color": "yellow"
+            }
+          ]
+        },
+        "q_values": {
+          "LEFT": 0.05029409006237984,
+          "RIGHT": 0.0,
+          "FORWARD": 0.16426821053028107,
+          "PICKUP": 2.148747444152832,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD",
+          "PICKUP"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.3,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.3,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 4,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 3,
+        "agent_dir_name": "up",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            2
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.25938236713409424,
+          "RIGHT": -0.00011019996600225568,
+          "FORWARD": 2.009286403656006,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 5,
+      "action": "RIGHT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": false,
+            "is_locked": true
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "RIGHT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 3,
+          "agent_dir_name": "up",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.3983915448188782,
+          "RIGHT": 2.0634353160858154,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 6,
+      "action": "TOGGLE",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          1,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "TOGGLE",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "unlock door at (2, 1)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": false,
+              "is_locked": true
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.7648160457611084,
+          "RIGHT": 0.204573854804039,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 2.1784162521362305,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "TOGGLE"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.5,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.5,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 7,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          2,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            1,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": -0.09802639484405518,
+          "RIGHT": -0.011372242122888565,
+          "FORWARD": 1.7683720588684082,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.04124732315540314,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD",
+          "TOGGLE"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 8,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 0,
+        "agent_dir_name": "right",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            2,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.15135180950164795,
+          "RIGHT": 0.044494785368442535,
+          "FORWARD": 1.8101258277893066,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 9,
+      "action": "RIGHT",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          1
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "RIGHT",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            1
+          ],
+          "agent_dir": 0,
+          "agent_dir_name": "right",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.04400769993662834,
+          "RIGHT": 1.8541117906570435,
+          "FORWARD": 0.0,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.0,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.0,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 10,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          2
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0,
+      "terminated": false,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            1
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.9327214360237122,
+          "RIGHT": 0.4474656879901886,
+          "FORWARD": 1.952978491783142,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 0.05,
+        "reward_terms": {
+          "env_reward": 0.0,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 0.0
+        }
+      }
+    },
+    {
+      "t": 11,
+      "action": "FORWARD",
+      "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+      "symbolic_state": {
+        "width": 5,
+        "height": 5,
+        "walls": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "goal_pos": [
+          3,
+          3
+        ],
+        "agent_pos": [
+          3,
+          3
+        ],
+        "agent_dir": 1,
+        "agent_dir_name": "down",
+        "carrying_key": "yellow",
+        "doors": [
+          {
+            "pos": [
+              2,
+              1
+            ],
+            "color": "yellow",
+            "is_open": true,
+            "is_locked": false
+          }
+        ],
+        "keys": []
+      },
+      "reward": 0.9568,
+      "terminated": true,
+      "truncated": false,
+      "metadata": {
+        "policy_type": "q_learning",
+        "action_name": "FORWARD",
+        "rationale": "Choose the highest-value action among the currently valid symbolic operators, using a progress-oriented tie-breaker so unseen states do not degenerate into spin loops.",
+        "symbolic_subgoal": "reach goal at (3, 3)",
+        "symbolic_state": {
+          "width": 5,
+          "height": 5,
+          "walls": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "goal_pos": [
+            3,
+            3
+          ],
+          "agent_pos": [
+            3,
+            2
+          ],
+          "agent_dir": 1,
+          "agent_dir_name": "down",
+          "carrying_key": "yellow",
+          "doors": [
+            {
+              "pos": [
+                2,
+                1
+              ],
+              "color": "yellow",
+              "is_open": true,
+              "is_locked": false
+            }
+          ],
+          "keys": []
+        },
+        "q_values": {
+          "LEFT": 0.06659722328186035,
+          "RIGHT": 0.0,
+          "FORWARD": 2.001147747039795,
+          "PICKUP": 0.0,
+          "DROP": 0.0,
+          "TOGGLE": 0.0,
+          "DONE": 0.0
+        },
+        "valid_actions": [
+          "LEFT",
+          "RIGHT",
+          "FORWARD"
+        ],
+        "epsilon": 0.07339156434523345,
+        "training": false,
+        "shaped_reward": 2.0068,
+        "reward_terms": {
+          "env_reward": 0.9568,
+          "distance_progress": 0.05,
+          "key_bonus": 0.0,
+          "door_bonus": 0.0,
+          "revisit_penalty": -0.0,
+          "terminal_bonus": 1.0
+        }
+      }
+    }
+  ],
+  "extra_metrics": {
+    "training": false,
+    "max_steps": 300,
+    "epsilon": 0.07339156434523345,
+    "q_table_size": 141,
+    "shaped_reward_total": 0.0
+  }
+}
